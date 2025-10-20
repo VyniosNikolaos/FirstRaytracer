@@ -34,25 +34,6 @@ A from-scratch implementation of a ray tracing renderer in C++ with no external 
 - C++ compiler with C++11 support (g++, clang++, MSVC)
 - No external libraries needed!
 
-### Compilation
-
-```bash
-# Linux/macOS
-g++ -o raytracer raytracer.cpp -std=c++11 -O2
-
-# Windows (MSVC)
-cl /EHsc /O2 raytracer.cpp
-
-# Windows (MinGW)
-g++ -o raytracer.exe raytracer.cpp -std=c++11 -O2
-```
-
-### Running
-
-```bash
-./raytracer
-```
-
 This will generate four PPM images:
 - `output_distance.ppm` - Distance-based visualization
 - `output_materials.ppm` - Flat-shaded materials

@@ -4,30 +4,28 @@
 
 A from-scratch implementation of a ray tracing renderer in C++ with no external dependencies. This project demonstrates the fundamentals of physically-based rendering, from basic ray-sphere intersection to realistic lighting and shadows.
 
-![Ray Tracing Output](https://img.shields.io/badge/output-PPM-blue) ![C++](https://img.shields.io/badge/C%2B%2B-11-00599C?logo=cplusplus) ![License](https://img.shields.io/badge/license-MIT-green)
-
-## 🎨 Features
+## Features
 
 - **Pure C++ Implementation** - No external libraries required
-- **Progressive Rendering Pipeline** - Four distinct rendering stages showcasing ray tracing fundamentals
+- **Progressive Rendering Pipeline** - Four distinct rendering stages covering ray tracing fundamentals
 - **Ray-Sphere Intersection** - Efficient geometric intersection testing
 - **Phong-style Lighting** - Diffuse (Lambertian) shading model
 - **Shadow Casting** - Realistic shadows through shadow ray testing
 - **Multiple Light Sources** - Support for colored lights with varying intensities
 - **PPM Image Output** - Simple, portable image format
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Quick Start](#-quick-start)
-- [Rendering Pipeline](#-rendering-pipeline)
-- [Architecture](#-architecture)
-- [Usage Examples](#-usage-examples)
-- [Output Gallery](#-output-gallery)
-- [Technical Details](#-technical-details)
-- [Customization](#-customization)
-- [Future Enhancements](#-future-enhancements)
+- [Quick Start](#quick-start)
+- [Rendering Pipeline](#rendering-pipeline)
+- [Architecture](#architecture)
+- [Usage Examples](#usage-examples)
+- [Output Gallery](#output-gallery)
+- [Technical Details](#technical-details)
+- [Customization](#customization)
+- [Future Enhancements](#future-enhancements)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -52,7 +50,7 @@ convert output_final.ppm output_final.png
 # PPM files are also directly viewable in most browsers
 ```
 
-## 🎬 Rendering Pipeline
+## Rendering Pipeline
 
 The ray tracer implements a progressive rendering pipeline, with each stage building on the previous:
 
@@ -83,7 +81,7 @@ Ray → Hit Point → Shadow Ray → Occlusion Test → Final Color
 ```
 Casts rays toward light sources to determine if points are in shadow.
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Classes
 
@@ -145,7 +143,7 @@ Static rendering methods for each pipeline stage:
 - `renderDiffuse()` - Step d
 - `renderWithShadows()` - Step e
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Creating a Custom Scene
 
@@ -212,7 +210,7 @@ scene.addLight(Light(Vec3(10, 5, 0), Vec3(1, 0.5, 0), 0.8));   // Orange
 scene.addLight(Light(Vec3(-10, 5, 0), Vec3(0, 0.5, 1), 0.6));  // Blue
 ```
 
-## 🖼️ Output Gallery
+## Output Gallery
 
 The default scene produces the following outputs:
 
@@ -233,7 +231,7 @@ The default scene produces the following outputs:
 - Occlusion testing
 - Multiple light sources
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Ray-Sphere Intersection
 
@@ -292,7 +290,7 @@ The small epsilon offset (`ε`) prevents self-intersection artifacts.
 - **Z-axis**: Forward (toward camera)
 - Right-handed coordinate system
 
-## 🎨 Customization
+## Customization
 
 ### Changing Image Resolution
 
@@ -325,7 +323,7 @@ for (int i = 0; i < 8; i++) {
 }
 ```
 
-## 🚧 Future Enhancements
+## Future Enhancements
 
 Potential features to add:
 
@@ -342,7 +340,7 @@ Potential features to add:
 - [ ] **PNG/JPEG export** - Using stb_image_write
 - [ ] **Interactive preview** - Real-time rendering with OpenGL
 
-## 📚 Learning Resources
+## Learning Resources
 
 If you're new to ray tracing, check out these resources:
 
@@ -351,11 +349,11 @@ If you're new to ray tracing, check out these resources:
 - **Scratchapixel** - Free online ray tracing tutorials
 - **PBRT Book** - Comprehensive rendering reference
 
-## 📝 License
+## License
 
 This project is released under the MIT License. Feel free to use, modify, and distribute.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Some ideas:
 - Add new geometric primitives
@@ -364,7 +362,7 @@ Contributions are welcome! Some ideas:
 - Add more example scenes
 - Improve documentation
 
-## ⚡ Performance Notes
+## Performance Notes
 
 Current performance (800×600 resolution):
 - ~0.1s per frame (distance/material stages)
@@ -376,17 +374,17 @@ For larger scenes, consider implementing:
 - Multi-threading
 - SIMD optimizations
 
-## 🐛 Known Issues
+## Known Issues
 
 - Shadow acne can occur with very small epsilon values
 - No acceleration structure (slow for many objects)
 - Limited to sphere primitives
 - PPM format produces large files
 
-## 📧 Contact
+## Contact
 
 Questions? Suggestions? Open an issue or submit a pull request!
 
 ---
 
-**Happy Ray Tracing! 🎨✨**
+**Happy Ray Tracing!**
